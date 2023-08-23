@@ -1,30 +1,22 @@
-var video = document.getElementById('scrollVideo');
-var isPlaying = false;
-
-function playVideo() {
-  if (!isPlaying) {
-    video.play();
-    isPlaying = true;
-  }
+const registerVideo = (bound, video) => {
+	bound = document.querySelector(bound);
+	video = document.querySelector(video);
+	const scrollVideo = ()=>{
+		if(video.duration) {
+			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+			
+			video.currentTime = video.duration * percentScrolled;
+		}
+		requestAnimationFrame(scrollVideo);
+	}
+	requestAnimationFrame(scrollVideo);
 }
 
-function pauseVideo() {
-  if (isPlaying) {
-    video.pause();
-    isPlaying = false;
-  }
-}
 
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY || window.pageYOffset;
+registerVideo("#bound-one", "#bound-one video");
 
-  // You can adjust these values to control when the video starts and stops
-  var startScroll = 1000; // Adjust this value to determine when video should start playing
-  var stopScroll = 3000; // Adjust this value to determine when video should stop playing
+registerVideo("#bound-two", "#bound-two video")
 
-  if (scrollPosition >= startScroll && scrollPosition <= stopScroll) {
-    playVideo();
-  } else {
-    pauseVideo();
-  }
-});
+registerVideo("#bound-three", "#bound-three video")
