@@ -14,9 +14,4 @@ const registerVideo = (bound, video) => {
 	requestAnimationFrame(scrollVideo);
 }
 
-
-registerVideo("#bound-one", "#bound-one video");
-
 registerVideo("#bound-two", "#bound-two video")
-
-registerVideo("#bound-three", "#bound-three video")
