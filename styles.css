@@ -5,15 +5,10 @@ body {
 	font-size: 1.4rem;
 }
 
-#bound-one {
-	background: #d0d8db;
-}
 #bound-two {
 	background: #dfcece;
 }
-#bound-three {
-	background: #D0D6B3;
-}
+
 .scroll-bound {
 	height: 500vh;
 	
@@ -29,6 +24,6 @@ body {
 	}
 	
 	video {
-		width: 80%;
+		width: 100%;
 	}
 }
