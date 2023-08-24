@@ -1,32 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Define character encoding and metadata -->
+  <meta charset="UTF-8">
+  <title>Scroll deck</title>
+  <!-- Configure initial viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include a standardized CSS reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!-- Link to your custom stylesheet -->
+  <link rel="stylesheet" href="./style.css"> <!-- Make sure "style.css" is in the same directory -->
+
+  <!-- All head content loaded, page styling and metadata defined -->
+</head>
+<body>
+<!-- Begin main content section -->
 <div class="app">
-	<div id="bound-one" class="scroll-bound">
-		<div class="content">
-			<p>WebM Video</p>
- 			<video width="600" muted preload>
-				<source src="https://cdn.ananaspizza.de/file/malte-image-store/v9-webm.webm" type="video/webm">
-				<p>Your user agent does not support the HTML5 Video element.</p>
+  <!-- Create a section that responds to scrolling -->
+  <div id="bound-one" class="scroll-bound">
+    <!-- Content within the scrolling section -->
+    <div class="content">
+      <!-- Embed a video that spans the entire width -->
+      <video width="100%" muted preload>
+        <!-- Specify the video source and type -->
+        <source src="video.mp4" type="video/mp4">
+        <!-- Display a message if the browser doesn't support HTML5 video -->
+        <p>Your user agent does not support the HTML5 Video element.</p>
       </video>
-		</div>
-	</div>
-	
-	<div id="bound-two" class="scroll-bound">
-		<div class="content">
-			<p>MP4 Video - Keyframe Interval 1</p>
- 			<video width="600" muted preload>
-   			<source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-1.mp4" type="video/mp4">
-    		<p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-		</div>
-	</div>
-	
-	<div id="bound-three" class="scroll-bound">
-		<div class="content">
-			<p>MP4 Video - Keyframe Interval 20</p>
- 			<video width="600" muted preload>
-   			<source src="https://cdn.ananaspizza.de/file/malte-image-store/keyframe-interval-20.mp4" type="video/mp4">
-    		<p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-		</div>
-	</div>
-	
+    </div>
+  </div>
 </div>
+<!-- Main content section ends -->
+
+<!-- Include your custom JavaScript file for interactivity -->
+<script src="./script.js"></script> <!-- Make sure "script.js" is in the same directory -->
+</body>
+</html>
