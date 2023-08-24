@@ -1,38 +1,57 @@
+/* Apply border-box sizing to all elements for consistent box model */
 * {
   box-sizing: border-box;
 }
 
+/* Reset default margin, set font, and font size for the whole page */
 body {
   margin: 0;
   font-family: sans-serif;
   font-size: 1.4rem;
 }
 
+/* Styling for the first scrolling-bound section */
 #bound-one {
-  background: #000000;
+  background: #000000; /* Black background */
 }
 
+/* Styling for the second scrolling-bound section */
 #bound-two {
-  background: #dfcece;
+  background: #dfcece; /* Light gray background */
 }
 
+/* Styling for the third scrolling-bound section */
 #bound-three {
-  background: #D0D6B3;
+  background: #D0D6B3; /* Pale yellow background */
 }
 
+/* Common styles for scrolling-bound sections */
 .scroll-bound {
-  height: 500vh;
+  height: 500vh; /* Set the height to be 500 times the viewport height, creating a scrolling effect */
 }
+
+/* Styles for the content within scrolling-bound sections */
 .scroll-bound .content {
-  height: 100vh;
+  height: 100vh; /* Each content section takes up the full viewport height */
   width: 100%;
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: sticky; /* Make the content stick as you scroll */
+  top: 0; /* Stick content to the top of the viewport */
+  display: flex; /* Display as a flex container */
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
+
+/* Style for video elements within scrolling-bound sections */
 .scroll-bound video {
-  width: 100%;
+  width: 100%; /* Video width spans the entire container */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  /* Adjust other styles as needed for smaller screens */
 }
